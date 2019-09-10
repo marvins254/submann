@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".savesubscriptions"
+    android:background="@drawable/loginbackground" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Subscriptions"
+        android:gravity="center"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="30sp" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <EditText
+                android:id="@+id/editTextAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:textColor="#ede3c2"
+                android:textColorHint="@android:color/holo_blue_bright"
+                android:layout_marginTop="8dp"
+                android:hint="Account Name"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTextAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/holo_blue_bright"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:textColor="#ede3c2"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="Amount"
+                />
+            <EditText
+                android:id="@+id/editTextCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/holo_blue_bright"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:textColor="#ede3c2"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="cycle"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Next Payment"
+                android:gravity="center"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="20sp" />
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:background="@android:color/holo_blue_bright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
+
+            <Button
+                android:id="@+id/buttonsave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@android:color/holo_blue_bright"
+                android:layout_marginTop="8dp"
+                android:text="save" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="match_parent"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@android:color/holo_blue_bright"
+                android:layout_marginTop="8dp"
+                android:text="Cancel" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

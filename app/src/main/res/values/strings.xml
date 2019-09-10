@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">submann</string>
+    <string name="title_activity_subscriptions">subscriptions</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_listview">listview</string>
+    <string name="title_activity_subscriptionlist">subscriptionlist</string>
+    <string name="country_prompt">Choose a country</string>
+
+    <string name="title_activity_listsub">listsub</string>
+
+</resources>
