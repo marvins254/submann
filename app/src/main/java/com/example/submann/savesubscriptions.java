@@ -1,5 +1,6 @@
 package com.example.submann;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +31,15 @@ public class savesubscriptions extends AppCompatActivity {
         editTextAccount=findViewById(R.id.editTextAccount);
         editTextAmount = findViewById(R.id.editTextAmount);
         editTextCycle= findViewById(R.id.editTextCycle);
+        final String account= editTextAmount.getText().toString();
+        final String amount= editTextAccount.getText().toString();
+        final String cycle=editTextCycle.getText().toString();
+
+        //toolbar title
+        setTitle("Save Subscriptions");
+        //call toolbar
+        Toolbar toolbar=findViewById(R.id.toolbar2);
+        setActionBar(toolbar);
 
 
         findViewById(R.id.buttonsave).setOnClickListener(new View.OnClickListener() {
@@ -37,12 +48,15 @@ public class savesubscriptions extends AppCompatActivity {
                 Snackbar.make(view, "Saving ", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
+                Intent myint = new Intent(savesubscriptions.this, listsub.class);
+                myint.putExtra("account",account);
+                myint.putExtra("amount",amount);
+                myint.putExtra("cycle",cycle);
+                startActivity(myint);
 //            String myText=editTextAccount.getText().toString();
 //            textViewSave.setText(myText);
-            Intent y = new Intent(savesubscriptions.this, listsub.class);
                 SaveSub();
-//            startActivity(y);
-//            startActivity(new Intent(getApplicationContext(), listsub.class));
+
 
             }
         });
@@ -67,19 +81,19 @@ public class savesubscriptions extends AppCompatActivity {
 
         if (TextUtils.isEmpty(account)) {
             editTextAccount.setError("Please enter an account");
-            editTextAccount.requestFocus();
+//            editTextAccount.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(amount)) {
             editTextAmount.setError("Please enter an amount");
-            editTextAmount.requestFocus();
+//            editTextAmount.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(cycle)) {
             editTextCycle.setError("Please enter a payment cycle");
-            editTextCycle.requestFocus();
+//            editTextCycle.requestFocus();
             return;
         }
 

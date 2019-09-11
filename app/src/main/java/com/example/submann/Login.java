@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
         editTextPassword=findViewById(R.id.editTextPassword);
         buttonLogin=findViewById(R.id.login);
         next=findViewById(R.id.next);
-
+        setTitle("Login");
 
         editTextUsername =findViewById(R.id.editTextUsername);
         editTextPassword =findViewById(R.id.editTextPassword);

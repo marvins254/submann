@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         login= findViewById(R.id.login);
         register1= findViewById(R.id.register1);
-
+        setTitle("welcome");
 
         register1.setOnClickListener(new View.OnClickListener() {
             @Override

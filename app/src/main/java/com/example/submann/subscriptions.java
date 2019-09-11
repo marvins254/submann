@@ -23,7 +23,7 @@ public class subscriptions extends AppCompatActivity {
         setContentView(R.layout.content_subscriptions);
 
         // Get ListView object from xml
-        listView = (ListView) findViewById(R.id.list);
+        listView =findViewById(R.id.list);
 
         // Defined Array values to show in ListView
         String[] values = new String[] { "cellular subscription",

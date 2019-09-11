@@ -7,6 +7,9 @@
     tools:context=".savesubscriptions"
     android:background="@drawable/loginbackground" >
 
+    <include
+        android:id="@+id/toolbar2"
+       layout="@layout/toolbar"></include>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

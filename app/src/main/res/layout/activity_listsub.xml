@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
+<include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"></include>
     <include layout="@layout/content_listsub" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/textViewSave" />
-
+        android:id="@+id/textView" />
+    <ListView
+        android:id="@+id/listSubscription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
